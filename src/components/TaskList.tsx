@@ -1,5 +1,8 @@
 import React from 'react';
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel, IonButton } from '@ionic/react';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonItem, IonLabel, IonButton, IonRouterOutlet, useIonRouter } from '@ionic/react';
+import { Redirect, Route, Router } from 'react-router';
+import { IonReactRouter } from '@ionic/react-router';
+import TaskDetailView from './TaskDetail';
 
 // Placeholder tasks array; in a real app, this would come from state management or props
 const tasks = [
@@ -9,8 +12,10 @@ const tasks = [
 ];
 
 const TaskListView: React.FC = () => {
+  const router = useIonRouter();
   const handleTaskClick = (taskId: string) => {
     // Navigate to Task Detail View with taskId
+    router.push(`/tasks/${taskId}`)
     console.log('Navigate to task detail view', taskId);
   };
 
