@@ -9,11 +9,9 @@ interface EventTask {
   endTime?: string; // ISO string format
 }
 
-// Example events/tasks data - replace with dynamic data from your backend or state management
 const eventsTasksSample: EventTask[] = [
   { id: '1', title: 'Math Homework', startTime: new Date().toISOString(), endTime: new Date().toISOString() },
   { id: '2', title: 'Family Dinner', startTime: new Date().toISOString() },
-  // Add more sample events/tasks
 ];
 
 const DetailedCalendarView: React.FC = (children) => {

@@ -1,11 +1,12 @@
 import React from 'react';
 import { IonList, IonItem, IonLabel, IonBadge } from '@ionic/react';
 
-// Placeholder for tasks; in a real app, this would come from app state or props
 const tasks = [
-  { id: '1', title: 'Grocery Shopping', dueDate: 'Today' },
-  { id: '2', title: 'Doctor Appointment', dueDate: 'Tomorrow' },
-  { id: '3', title: 'School Meeting', dueDate: 'Friday' },
+  { id: '1', title: 'Grocery Shopping', dueDate: new Date().toLocaleDateString() },
+  // Add a new task with a due date of 2 days from now
+  { id: '2', title: 'Doctor Appointment', dueDate: new Date().toLocaleDateString() + 2},
+  // Add a new task with a due date of a week from now
+  { id: '3', title: 'School Meeting', dueDate: new Date().toLocaleDateString() + 7 },
 ];
 
 const UpcomingTasksComponent: React.FC = () => {
