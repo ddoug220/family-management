@@ -4,5 +4,6 @@ export interface Task {
   description: string;
   assignedTo: string; // User ID
   dueDate: Date;
+  complexity: 'Low' | 'Medium' | 'High';
   completed: boolean;
 }
