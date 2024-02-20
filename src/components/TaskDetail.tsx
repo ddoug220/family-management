@@ -12,8 +12,7 @@ const taskDetail = {
 
 const TaskDetailView: React.FC = () => {
   const handleCompleteTask = () => {
-    // Logic to mark the task as completed
-    console.log('Task completed');
+    taskDetail.completed = true;
   };
 
   return (
