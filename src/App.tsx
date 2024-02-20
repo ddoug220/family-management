@@ -11,7 +11,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { ellipse, square, triangle, homeSharp, settingsSharp, textSharp } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -48,43 +48,30 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tasks">
-            <TaskListView />
-          </Route>
         <Route exact path="/dashboard" component={MainDashboard} />
         <Route exact path="/tasks" component={TaskListView} />
         <Route path="/tasks/:taskId" component={TaskDetailView} />
         <Route exact path="/calendar" component={DetailedCalendarView} />
         <Route exact path="/messages" component={MessagesPage} />
         <Route exact path="/settings" component={SettingsPage} />
-          {/* <Route exact path="/calendar">
-            <Tab2 />
-          </Route> */}
-          <Route exact path="/tab1">
-            <Tab1 />
-          </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
-          </Route>
-          <Route path="/tab3">
-            <Tab3 />
-          </Route>
+   {
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/dashboard" />
           </Route>
+          }
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          <IonTabButton tab="tab1" href="/dashboard">
+            <IonIcon aria-hidden="true" icon={homeSharp} />
+            <IonLabel>Home</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+          <IonTabButton tab="tab2" href="/messages">
+            <IonIcon aria-hidden="true" icon={textSharp} />
+            <IonLabel>Messages</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="tab3" href="/settings">
+            <IonIcon aria-hidden="true" icon={settingsSharp} />
+            <IonLabel>Settings</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
