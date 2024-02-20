@@ -34,6 +34,12 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import TaskListView from './components/TaskList';
+import MainDashboard from './pages/task-pages/Dashboard';
+import TaskDetailView from './components/TaskDetail';
+import DetailedCalendarView from './components/Calendar';
+import SettingsPage from './pages/Settings';
+import MessagesPage from './pages/task-pages/Messages';
 
 setupIonicReact();
 
@@ -42,6 +48,18 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
+          <Route exact path="/tasks">
+            <TaskListView />
+          </Route>
+        <Route exact path="/dashboard" component={MainDashboard} />
+        <Route exact path="/tasks" component={TaskListView} />
+        <Route path="/tasks/:taskId" component={TaskDetailView} />
+        <Route exact path="/calendar" component={DetailedCalendarView} />
+        <Route exact path="/messages" component={MessagesPage} />
+        <Route exact path="/settings" component={SettingsPage} />
+          {/* <Route exact path="/calendar">
+            <Tab2 />
+          </Route> */}
           <Route exact path="/tab1">
             <Tab1 />
           </Route>
