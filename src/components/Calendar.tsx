@@ -14,8 +14,7 @@ const eventsTasksSample: EventTask[] = [
   { id: '2', title: 'Family Dinner', startTime: new Date().toISOString() },
 ];
 
-const DetailedCalendarView: React.FC = (children) => {
-  console.log(children)
+const DetailedCalendarView: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<string | number>(new Date().toISOString());
   const [dailyEvents, setDailyEvents] = useState<EventTask[]>([]);
 
