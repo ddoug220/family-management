@@ -1,7 +1,7 @@
 import type { Reward } from '../types';
 
-const SLICE_COLORS = ['#c4492c', '#d4a017', '#23403a', '#7a3e1d', '#2f6b4f', '#e8d4a8'];
-const SLICE_INK = ['#fff6e4', '#1f2a22', '#fff6e4', '#fff6e4', '#fff6e4', '#1f2a22'];
+const SLICE_COLORS = ['#4b4ae3', '#1f2437', '#e39b12', '#8b8cf5', '#3d4458', '#f4c44a'];
+const SLICE_INK = ['#ffffff', '#ffffff', '#161513', '#161513', '#ffffff', '#161513'];
 
 type RewardWheelProps = {
   rewards: Reward[];
@@ -56,9 +56,9 @@ export function RewardWheel({
           }}
         >
           <svg viewBox="0 0 200 200" role="img" aria-label="Prize wheel">
-            <circle cx="100" cy="100" r="98" fill="#1f2a22" />
+            <circle cx="100" cy="100" r="99" fill="#e3e0d8" />
             {count === 0 ? (
-              <circle cx="100" cy="100" r="94" fill="#e8d4a8" />
+              <circle cx="100" cy="100" r="94" fill="#ececff" />
             ) : count === 1 ? (
               <circle cx="100" cy="100" r="94" fill={SLICE_COLORS[0]} />
             ) : (
@@ -81,9 +81,10 @@ export function RewardWheel({
                   x={tx}
                   y={ty}
                   fill={SLICE_INK[index % SLICE_INK.length]}
-                  fontSize={count > 8 ? 6.5 : 7.4}
-                  fontFamily="Fraunces, Georgia, serif"
+                  fontSize={count > 8 ? 6.8 : 7.6}
+                  fontFamily="Plus Jakarta Sans, Segoe UI, sans-serif"
                   fontWeight="700"
+                  letterSpacing="-0.02em"
                   textAnchor="middle"
                   dominantBaseline="middle"
                   transform={`rotate(${mid + (flip ? 180 : 0)} ${tx} ${ty})`}
@@ -91,11 +92,6 @@ export function RewardWheel({
                   {shortLabel(reward.title)}
                 </text>
               );
-            })}
-            {Array.from({ length: 16 }, (_, index) => {
-              const deg = (index / 16) * 360;
-              const [cx, cy] = polar(100, 100, 97, deg);
-              return <circle key={deg} cx={cx} cy={cy} r="1.6" fill="#d4a017" />;
             })}
           </svg>
         </div>

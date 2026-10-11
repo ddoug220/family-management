@@ -1,4 +1,5 @@
 import type { Chore } from '../types';
+import { CheckIcon } from './Icons';
 
 type ChoreRowProps = {
   chore: Chore;
@@ -16,7 +17,7 @@ export function ChoreRow({ chore, onDone }: ChoreRowProps) {
         aria-pressed={chore.completed}
         aria-label={chore.completed ? `${chore.title}, done` : `Mark ${chore.title} done`}
       >
-        {chore.completed ? <span className="chore__mark">OK</span> : null}
+        {chore.completed ? <CheckIcon className="chore__mark" /> : null}
       </button>
       <div className="chore__body">
         <p className="chore__title">{chore.title}</p>
