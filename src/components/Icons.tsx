@@ -55,3 +55,45 @@ export function KeyIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function CheckIcon({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M5 12.5 10 17.5 19 7"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function TicketIcon({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M3.8 8.4c0-.8.6-1.4 1.4-1.4h13.6c.8 0 1.4.6 1.4 1.4v1.7a2.1 2.1 0 0 0 0 4.1v1.8c0 .8-.6 1.4-1.4 1.4H5.2c-.8 0-1.4-.6-1.4-1.4v-1.8a2.1 2.1 0 0 0 0-4.1z"
+        fill="currentColor"
+        opacity="0.18"
+      />
+      <path
+        d="M3.8 8.4c0-.8.6-1.4 1.4-1.4h13.6c.8 0 1.4.6 1.4 1.4v1.7a2.1 2.1 0 0 0 0 4.1v1.8c0 .8-.6 1.4-1.4 1.4H5.2c-.8 0-1.4-.6-1.4-1.4v-1.8a2.1 2.1 0 0 0 0-4.1z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M10.2 7.6v8.8"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeDasharray="1.5 2.1"
+      />
+    </svg>
+  );
+}

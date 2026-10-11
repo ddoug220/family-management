@@ -1,3 +1,5 @@
+import { TicketIcon } from './Icons';
+
 type TicketStubProps = {
   points: number;
   kidName: string;
@@ -6,10 +8,11 @@ type TicketStubProps = {
 export function TicketStub({ points, kidName }: TicketStubProps) {
   return (
     <div className="ticket" aria-live="polite">
-      <div className="ticket__notch ticket__notch--left" />
-      <div className="ticket__notch ticket__notch--right" />
-      <p className="ticket__label">{kidName}’s tickets</p>
-      <p className="ticket__value">{points}</p>
+      <div className="ticket__copy">
+        <p className="ticket__label">{kidName}’s tickets</p>
+        <p className="ticket__value">{points}</p>
+      </div>
+      <TicketIcon className="ticket__icon" />
     </div>
   );
 }
