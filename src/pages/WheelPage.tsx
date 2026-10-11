@@ -26,10 +26,9 @@ export function WheelPage({ store }: WheelPageProps) {
         <p className="eyebrow">Prize booth</p>
         <h1>Spend tickets. Spin once.</h1>
         <p className="lede">
-          A spin costs <strong>{state.spinCost}</strong> tickets.
           {ticketsNeeded > 0
-            ? ` You need ${ticketsNeeded} more.`
-            : ' The pointer at the top names the prize.'}
+            ? `A spin costs ${state.spinCost}. You need ${ticketsNeeded} more tickets.`
+            : `A spin costs ${state.spinCost}. The pointer at the top names the prize.`}
         </p>
         <TicketStub points={state.points} kidName={state.kidName} />
       </header>
