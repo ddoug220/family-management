@@ -462,13 +462,26 @@ button:focus-visible {
 .editor li,
 .add-row {
   display: grid;
-  grid-template-columns: 1fr 4.2rem auto;
+  grid-template-columns: minmax(0, 1fr) 5.25rem auto;
   gap: 0.4rem;
 }
 
+.editor input,
+.editor select,
+.add-row input,
+.add-row select {
+  min-width: 0;
+}
+
+.editor .ghost-btn,
+.add-row .solid-btn,
+.add-row .ghost-btn {
+  padding-inline: 0.65rem;
+}
+
 .editor li:has(input:only-of-type),
-.add-row:has(input:only-of-type) {
-  grid-template-columns: 1fr auto;
+.add-row:has(input:only-of-type):not(:has(select)) {
+  grid-template-columns: minmax(0, 1fr) auto;
 }
 
 .solid-btn,
