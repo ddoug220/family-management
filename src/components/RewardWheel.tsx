@@ -28,8 +28,8 @@ function slicePath(index: number, count: number): string {
 }
 
 function shortLabel(title: string): string {
-  if (title.length <= 18) return title;
-  return `${title.slice(0, 16)}…`;
+  if (title.length <= 20) return title;
+  return `${title.slice(0, 18)}…`;
 }
 
 export function RewardWheel({

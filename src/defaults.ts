@@ -36,12 +36,12 @@ export function createDefaultState(): AppState {
       chore('Homework time', 'High'),
     ],
     rewards: [
-      reward('Extra 15 minutes of screen time'),
-      reward('Choose tonight’s dessert'),
-      reward('Stay up 20 minutes later'),
-      reward('Pick the Saturday movie'),
-      reward('One small treat from the store'),
-      reward('Skip one chore tomorrow'),
+      reward('15 extra minutes'),
+      reward('Pick dessert'),
+      reward('Later bedtime'),
+      reward('Saturday movie'),
+      reward('Store treat'),
+      reward('Skip a chore'),
     ],
     wins: [],
   };

@@ -11,9 +11,11 @@
   --done: #2f6b4f;
   --line: #c9b17a;
   --warn: #7a3e1d;
-  font-family: 'Atkinson Hyperlegible', 'Segoe UI', sans-serif;
+  font-family: 'Atkinson Hyperlegible', 'Segoe UI', system-ui, sans-serif;
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  word-spacing: 0.06em;
   background: var(--paper);
   color: var(--ink);
 }
@@ -47,7 +49,7 @@ h1,
 h2 {
   font-family: Fraunces, Georgia, serif;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
   margin: 0;
 }
 
@@ -68,7 +70,7 @@ p {
   min-height: 100dvh;
   max-width: 28rem;
   margin: 0 auto;
-  padding: 1rem 1rem calc(6.5rem + env(safe-area-inset-bottom));
+  padding: 1rem 1rem calc(7.25rem + env(safe-area-inset-bottom));
 }
 
 .shell__main {
@@ -235,7 +237,7 @@ p {
 
 .wheel__frame {
   position: relative;
-  width: min(86vw, 22rem);
+  width: min(78vw, 19.5rem);
   aspect-ratio: 1;
   margin-top: -0.35rem;
 }
@@ -399,6 +401,7 @@ select {
   padding: 0.55rem 0.7rem calc(0.7rem + env(safe-area-inset-bottom));
   background: var(--pine);
   color: var(--cream);
+  z-index: 30;
 }
 
 .dock__btn {

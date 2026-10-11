@@ -34,15 +34,6 @@ export function WheelPage({ store }: WheelPageProps) {
         <TicketStub points={state.points} kidName={state.kidName} />
       </header>
 
-      <RewardWheel
-        rewards={state.rewards}
-        rotation={rotation}
-        spinning={spinning}
-        durationMs={spinDurationMs}
-        onSpin={spin}
-        canSpin={canSpin}
-      />
-
       {spinMessage ? (
         <p className="banner banner--warn" role="status">
           {spinMessage}
@@ -58,6 +49,15 @@ export function WheelPage({ store }: WheelPageProps) {
           </button>
         </div>
       ) : null}
+
+      <RewardWheel
+        rewards={state.rewards}
+        rotation={rotation}
+        spinning={spinning}
+        durationMs={spinDurationMs}
+        onSpin={spin}
+        canSpin={canSpin}
+      />
 
       {state.wins.length > 0 ? (
         <aside className="wins">
