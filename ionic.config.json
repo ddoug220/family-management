@@ -1,7 +1,0 @@
-{
-  "name": "family-management",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}
